@@ -35,7 +35,15 @@ App::after(function($request, $response)
 
 Route::filter('auth', function()
 {
-	if (Auth::guest()) return Redirect::guest('login');
+	// Check if the user is logged in
+	if ( ! Sentry::check())
+	{
+		// Store the current uri in the session
+		Session::put('loginRedirect', Request::url());
+
+		// Redirect to the login page
+		return Redirect::to('users/login');
+	}
 });
 
 

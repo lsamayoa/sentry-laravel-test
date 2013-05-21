@@ -65,7 +65,7 @@ return array(
 	|
 	*/
 
-	'key' => '1j2039jnSAsiaSDFGfnASD0fasdfWsaaskjneiHjJdsfa134ef',
+	'key' => 'ilikeburritos',
 
 	/*
 	|--------------------------------------------------------------------------

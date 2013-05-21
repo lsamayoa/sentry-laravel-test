@@ -15,3 +15,8 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::resource('todos', 'TodosController');
+Route::get('users/login', array('as' => 'users.login', 'uses' => 'UsersController@login'));
+Route::post('users/login',  array('as' => 'users.authenticate', 'uses' => 'UsersController@authenticate'));
+Route::get('users/logout', array('as' => 'users.logout', 'uses' => 'UsersController@logout'));
